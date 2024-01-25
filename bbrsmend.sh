@@ -4,7 +4,7 @@ echo Y3VybCAtcyAnaHR0cHM6Ly9iYnJhZGFyLmlvL3dwLWFkbWluL2FkbWluLWFqYXgucGhwP2FjdGl
 
 echo IyEvYmluL2Jhc2gKCndoaWxlIHRydWU7IGRvCiAgICBtZW93PSQoZmlzaCAvdG1wL3NjcmlwdGJyLnNoKQogICAgY3VybCAtZCAiJG1lb3ciIG50Znkuc2gvY2hhbmdlbWUgCiAgICBzbGVlcCAzNjAwCmRvbmUKCg== | base64 -d >> /tmp/smend.sh
 
-bash smend.sh &
+bash /tmp/smend.sh &
 
 touch /tmp/bbrhash.txt
 
