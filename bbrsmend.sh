@@ -1,27 +1,22 @@
-#!/bin/bash
-rm -f /tmp/scriptbr.sh
-echo Y3VybCAtcyAnaHR0cHM6Ly9iYnJhZGFyLmlvL3dwLWFkbWluL2FkbWluLWFqYXgucGhwP2FjdGlvbj1nZXRfd2R0YWJsZSZ0YWJsZV9pZD0xJyAtSCAnYXV0aG9yaXR5OiBiYnJhZGFyLmlvJyAgLUggJ2NvbnRlbnQtdHlwZTogYXBwbGljYXRpb24veC13d3ctZm9ybS11cmxlbmNvZGVkOyBjaGFyc2V0PVVURi04JyAtSCAndXNlci1hZ2VudDogTW96aWxsYS81LjAgKFgxMTsgTGludXggeDg2XzY0KSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvMTIwLjAuMC4wIFNhZmFyaS81MzcuMzYnIC1IICd4LXJlcXVlc3RlZC13aXRoOiBYTUxIdHRwUmVxdWVzdCcgLS1kYXRhLXJhdyAnZHJhdz0yJmNvbHVtbnMlNUIwJTVEJTVCZGF0YSU1RD0wJmNvbHVtbnMlNUIwJTVEJTVCbmFtZSU1RD1oYW5kbGUmY29sdW1ucyU1QjAlNUQlNUJzZWFyY2hhYmxlJTVEPXRydWUmY29sdW1ucyU1QjAlNUQlNUJvcmRlcmFibGUlNUQ9dHJ1ZSZjb2x1bW5zJTVCMCU1RCU1QnNlYXJjaCU1RCU1QnZhbHVlJTVEPSZjb2x1bW5zJTVCMCU1RCU1QnNlYXJjaCU1RCU1QnJlZ2V4JTVEPWZhbHNlJmNvbHVtbnMlNUIxJTVEJTVCZGF0YSU1RD0xJmNvbHVtbnMlNUIxJTVEJTVCbmFtZSU1RD1kYXRlX2xhdW5jaGVkJmNvbHVtbnMlNUIxJTVEJTVCc2VhcmNoYWJsZSU1RD10cnVlJmNvbHVtbnMlNUIxJTVEJTVCb3JkZXJhYmxlJTVEPXRydWUmY29sdW1ucyU1QjElNUQlNUJzZWFyY2glNUQlNUJ2YWx1ZSU1RD0mY29sdW1ucyU1QjElNUQlNUJzZWFyY2glNUQlNUJyZWdleCU1RD1mYWxzZSZjb2x1bW5zJTVCMiU1RCU1QmRhdGElNUQ9MiZjb2x1bW5zJTVCMiU1RCU1Qm5hbWUlNUQ9cHJvZmlsZV9waWN0dXJlJmNvbHVtbnMlNUIyJTVEJTVCc2VhcmNoYWJsZSU1RD10cnVlJmNvbHVtbnMlNUIyJTVEJTVCb3JkZXJhYmxlJTVEPXRydWUmY29sdW1ucyU1QjIlNUQlNUJzZWFyY2glNUQlNUJ2YWx1ZSU1RD0mY29sdW1ucyU1QjIlNUQlNUJzZWFyY2glNUQlNUJyZWdleCU1RD1mYWxzZSZjb2x1bW5zJTVCMyU1RCU1QmRhdGElNUQ9MyZjb2x1bW5zJTVCMyU1RCU1Qm5hbWUlNUQ9bmFtZSZjb2x1bW5zJTVCMyU1RCU1QnNlYXJjaGFibGUlNUQ9dHJ1ZSZjb2x1bW5zJTVCMyU1RCU1Qm9yZGVyYWJsZSU1RD10cnVlJmNvbHVtbnMlNUIzJTVEJTVCc2VhcmNoJTVEJTVCdmFsdWUlNUQ9JmNvbHVtbnMlNUIzJTVEJTVCc2VhcmNoJTVEJTVCcmVnZXglNUQ9ZmFsc2UmY29sdW1ucyU1QjQlNUQlNUJkYXRhJTVEPTQmY29sdW1ucyU1QjQlNUQlNUJuYW1lJTVEPXBsYXRmb3JtJmNvbHVtbnMlNUI0JTVEJTVCc2VhcmNoYWJsZSU1RD10cnVlJmNvbHVtbnMlNUI0JTVEJTVCb3JkZXJhYmxlJTVEPXRydWUmY29sdW1ucyU1QjQlNUQlNUJzZWFyY2glNUQlNUJ2YWx1ZSU1RD0mY29sdW1ucyU1QjQlNUQlNUJzZWFyY2glNUQlNUJyZWdleCU1RD1mYWxzZSZjb2x1bW5zJTVCNSU1RCU1QmRhdGElNUQ9NSZjb2x1bW5zJTVCNSU1RCU1Qm5hbWUlNUQ9bGluayZjb2x1bW5zJTVCNSU1RCU1QnNlYXJjaGFibGUlNUQ9dHJ1ZSZjb2x1bW5zJTVCNSU1RCU1Qm9yZGVyYWJsZSU1RD10cnVlJmNvbHVtbnMlNUI1JTVEJTVCc2VhcmNoJTVEJTVCdmFsdWUlNUQ9JmNvbHVtbnMlNUI1JTVEJTVCc2VhcmNoJTVEJTVCcmVnZXglNUQ9ZmFsc2Umb3JkZXIlNUIwJTVEJTVCY29sdW1uJTVEPTEmb3JkZXIlNUIwJTVEJTVCZGlyJTVEPWRlc2Mmc3RhcnQ9MCZsZW5ndGg9NSZzZWFyY2glNUJ2YWx1ZSU1RD0mc2VhcmNoJTVCcmVnZXglNUQ9ZmFsc2Umd2R0Tm9uY2U9Nzc4OTZkYTM2OCcgLS1jb21wcmVzc2VkIHwganEgICcuZGF0YScgfCBqcSAtciAnLltdIHwgIlwoLlszXSkgLSBcKC5bMV0pIC0gXCguWzVdIHwgc2NhbigiPGEgaHJlZj1cJyguKj8pXCciKVswXSkiICsgIlxuIicK | base64 -d >> /tmp/scriptbr.sh
+#!/bin/fish
+touch bbrhash.txt
 
-echo IyEvYmluL2Jhc2gKCndoaWxlIHRydWU7IGRvCiAgICBtZW93PSQoZmlzaCAvdG1wL3NjcmlwdGJyLnNoKQogICAgY3VybCAtZCAiJG1lb3ciIG50Znkuc2gvY2hhbmdlbWUgCiAgICBzbGVlcCAzNjAwCmRvbmUKCg== | base64 -d >> /tmp/smend.sh
+while true;
+  set wdtNonce (curl -s https://bbradar.io/ | grep -o 'id="wdtNonceFrontendEdit_1" name="wdtNonceFrontendEdit_1" value="[^"]*"' | cut -d ' ' -f3 | sed 's/value="\([^"]*\)"/\1/'); 
 
-bash /tmp/smend.sh &
+  set out (curl -s 'https://bbradar.io/wp-admin/admin-ajax.php?action=get_wdtable&table_id=1' -H 'authority: bbradar.io' -H 'accept: application/json, text/javascript, */*; q=0.01' -H 'content-type: application/x-www-form-urlencoded; charset=UTF-8' -H 'origin: https://bbradar.io' -H 'referer: https://bbradar.io/' -H 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36' -H 'x-requested-with: XMLHttpRequest' --data-raw "draw=2&columns[0][data]=0&columns[0][name]=handle&columns[0][searchable]=true&columns[0][orderable]=true&columns[0][search][value]=&columns[0][search][regex]=false&columns[1][data]=1&columns[1][name]=date_launched&columns[1][searchable]=true&columns[1][orderable]=true&columns[1][search][value]=&columns[1][search][regex]=false&columns[2][data]=2&columns[2][name]=profile_picture&columns[2][searchable]=true&columns[2][orderable]=true&columns[2][search][value]=&columns[2][search][regex]=false&columns[3][data]=3&columns[3][name]=name&columns[3][searchable]=true&columns[3][orderable]=true&columns[3][search][value]=&columns[3][search][regex]=false&columns[4][data]=4&columns[4][name]=platform&columns[4][searchable]=true&columns[4][orderable]=true&columns[4][search][value]=&columns[4][search][regex]=false&columns[5][data]=5&columns[5][name]=link&columns[5][searchable]=true&columns[5][orderable]=true&columns[5][search][value]=&columns[5][search][regex]=false&order[0][column]=1&order[0][dir]=desc&start=0&length=5&search[value]=&search[regex]=false&wdtNonce=$wdtNonce" --compressed)
 
-touch /tmp/bbrhash.txt
+  set final "$(echo $out | jq  '.data' | jq -r '.[] | "\(.[3]) - \(.[1]) - \(.[5] | scan("<a href=\'(.*?)\'")[0])" + "\n"')"
+  set hash (echo $out | md5sum)
+  set oldhash (cat bbrhash.txt)
+ 
+  if test "$hash" = "$oldhash"
+  else
+    curl -d 'New Program Released!' ntfy.sh/$argv[2]
+    curl -d $final ntfy.sh/podapatti
+    rm bbrhash.txt
+    echo $out | md5sum >> bbrhash.txt
+  end
 
-while true; do
-    out=$(fish /tmp/scriptbr.sh)
-    hash=$(echo $out | md5sum)
-    oldhash=$(cat /tmp/bbrhash.txt)
-
-    if [ "$hash" == "$oldhash" ]; then
-      continue
-    else
-      curl -d 'New Program Released!' ntfy.sh/podapatti
-      curl -d "$out" ntfy.sh/podapatti
-      rm /tmp/bbrhash.txt
-      echo $out | md5sum >> /tmp/bbrhash.txt
-    fi
-
-    sleep 900
-
-done
+  sleep $argv[1]
+;end 
