@@ -13,7 +13,7 @@ while true;
   if test "$hash" = "$oldhash"
   else
     curl -d 'New Program Released!' ntfy.sh/$argv[2]
-    curl -d $final ntfy.sh/podapatti
+    curl -d $final ntfy.sh/$argv[2]
     rm bbrhash.txt
     echo $out | md5sum >> bbrhash.txt
   end
