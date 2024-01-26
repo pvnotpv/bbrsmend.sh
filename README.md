@@ -5,7 +5,7 @@
 
 Default - Checks for new programs every 15 minutes, and also sends the list of latest 5 programs every hour. Remove the semnd.sh line to prevent notification every hour.
 
-Edit: 26-Jan; The tool is actually broken rn and imma really busy to fix it at the moment, if you wanna know how the requests is made here it is-
+Edit: 26-Jan; The tool is actually broken rn and imma really busy to fix it at the moment, if you wanna know how the requests are made here it is-
 
 ```
 curl 'https://bbradar.io/wp-admin/admin-ajax.php?action=get_wdtable&table_id=1' \
