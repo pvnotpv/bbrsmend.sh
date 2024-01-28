@@ -7,3 +7,7 @@
 - Same with sendnhour script also ``` fish sendnhour.sh secondssleep topicname ``` :- Sends the latest 5 programs every N hour(the number of seconds you gave).
 
 ![img](https://i.ibb.co/wh6sLMC/IMG-20240125-183718.jpg)
+
+##
+![:pv](https://counter.max.srl/get/@:pvbbrsmend)
+(From 28/1/24)
