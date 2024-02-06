@@ -8,6 +8,9 @@
 
 ![img](https://i.ibb.co/wh6sLMC/IMG-20240125-183718.jpg)
 
+## Credits
+https://twitter.com/kleoz_ , bbradar.io
+
 ##
 ![:pv](https://counter.max.srl/get/@:pvbbrsmend)
 (From 28/1/24)
